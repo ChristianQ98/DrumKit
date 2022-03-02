@@ -9,41 +9,41 @@
 </head>
 <body>
     <div class="container">
-        <div class="main">
-            <div class="key" id="a" onclick="pressKey('a')">
+        <div class="main" onkeydown="pressKey()">
+            <div class="key" id="a" onclick="clickKey('a')" onkeydown="pressKey()">
                 <div class="letter">A</div>
                 <div class="sound" id="clap">CLAP</div>
             </div>
-            <div class="key" id="s" onclick="pressKey('s')">
+            <div class="key" id="s" onclick="clickKey('s')" onkeydown="pressKey()">
                 <div class="letter">S</div>
                 <div class="sound" id="hihat">HIHAT</div>
             </div>
-            <div class="key"  id="d" onclick="pressKey('d')">
+            <div class="key"  id="d" onclick="clickKey('d')" onkeydown="pressKey()">
                 <div class="letter">D</div>
                 <div class="sound" id="kick">KICK</div>
             </div>
-            <div class="key" id="f" onclick="pressKey('f')">
+            <div class="key" id="f" onclick="clickKey('f')" onkeydown="pressKey()">
                 <div class="letter">F</div>
                 <div class="sound" id="openhat">OPENHAT</div>
             </div>
-            <div class="key" id="g" onclick="pressKey('g')">
+            <div class="key" id="g" onclick="clickKey('g')" onkeydown="pressKey()">
                 <div class="letter" id="g">G</div>
                 <div class="sound" id="boom">BOOM</div>
                 <audio id="boomSound" src="./sounds/01 - JavaScript Drum Kit_sounds_boom.wav"></audio>
             </div>
-            <div class="key" id="h" onclick="pressKey('h')">
+            <div class="key" id="h" onclick="clickKey('h')" onkeydown="pressKey()">
                 <div class="letter">H</div>
                 <div class="sound" id="ride">RIDE</div>
             </div>
-            <div class="key" id="j" onclick="pressKey('j')">
+            <div class="key" id="j" onclick="clickKey('j')" onkeydown="pressKey()">
                 <div class="letter">J</div>
                 <div class="sound" id="snare">SNARE</div>
             </div>
-            <div class="key" id="k" onclick="pressKey('k')">
+            <div class="key" id="k" onclick="clickKey('k')" onkeydown="pressKey()">
                 <div class="letter">K</div>
                 <div class="sound" id="tom">TOM</div>
             </div>
-            <div class="key" id="l" onclick="pressKey('l')">
+            <div class="key" id="l" onclick="clickKey('l')" onkeydown="pressKey()">
                 <div class="letter">L</div>
                 <div class="sound" id="tink">TINK</div>
             </div>

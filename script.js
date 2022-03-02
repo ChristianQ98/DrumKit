@@ -34,30 +34,78 @@ tom.crossOrigin = "anonymous";
 const tink = new Audio('./sounds/01 - JavaScript Drum Kit_sounds_tink.wav');
 tink.crossOrigin = "anonymous";
 
-// Function that changes the styling of the key and plays the correct sound when the key is pressed
-const pressKey = (btn) => {
+// Function that changes the styling of the key and plays the correct sound when the key is clicked using the MOUSE
+const clickKey = (btn) => {
     // When the key/button gets pressed, it will have the styling of the "playing" class
     document.getElementById(btn).className = document.getElementById(btn).className.concat(" playing");
+    // A different sound will be played depending on which key gets clicked on the screen using the mouse
     switch(btn) {
         case 'a':
             clap.play();
+            break;
         case 's':
             hihat.play();
+            break;
         case 'd':
             kick.play();
+            break;
         case 'f':
             openhat.play();
+            break;
         case 'g':
-            openhat.play();
+            boom.play();
+            break;
         case 'h':
             ride.play();
+            break;
         case 'j':
             snare.play();
+            break;
         case 'k':
             tom.play();
+            break;
         case 'l':
             tink.play();
     }
     // After 100 ms, the key/button will go back to only having the class of "key", hence, returning to its default styling
     setInterval(() => document.getElementById(btn).className = "key", 100);
 }
+
+// Function that changes the styling of the key and plays the correct sound when the key is pressed using the KEYBOARD
+const pressKey = document.addEventListener('keydown', function(event) {
+    // Stores the key being pressed on the keyboard
+    let key = event.key;
+    // When the key/button gets pressed, it will have the styling of the "playing" class
+    document.getElementById(key).className = document.getElementById(key).className.concat(" playing");
+    // A different sound will be played depending on which key on the keyboard gets pressed
+    switch(key) {
+        case 'a':
+            clap.play();
+            break;
+        case 's':
+            hihat.play();
+            break;
+        case 'd':
+            kick.play();
+            break;
+        case 'f':
+            openhat.play();
+            break;
+        case 'g':
+            boom.play();
+            break;
+        case 'h':
+            ride.play();
+            break;
+        case 'j':
+            snare.play();
+            break;
+        case 'k':
+            tom.play();
+            break;
+        case 'l':
+            tink.play();
+    }
+    // After 100 ms, the key/button will go back to only having the class of "key", hence, returning to its default styling
+        setInterval(() => document.getElementById(key).className = "key", 100);
+    })
