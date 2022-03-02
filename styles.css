@@ -27,6 +27,7 @@ body {
 .key-pressed {
     text-align: center;
     cursor: pointer;
+    user-select: none;
 }
 
 .key {
